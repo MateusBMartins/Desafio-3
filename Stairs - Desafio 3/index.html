@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Desafio 3</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            .invisible{
+                visibility: hidden  !important;
+            }
+            .visible{
+                visibility: visible !important;
+                width: 50%;
+                margin: 0 auto;
+                text-align: center;
+            }
+
+            #barra{
+                width: 50%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            #bandeira {
+                max-height: 300px;
+            }
+            .table{
+                text-align: left;
+            }
+
+            
+        </style>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="script.js">
+            </script>
+    </head>
+    <body>
+
+        <h2 class="display-4 text-center">
+            Sistema de busca dos Estados Brasileiros
+        </h2>
+        <div id="barra" class="mx-auto">
+            <form class="input-group mb-2">
+                <input class="form-control" type="search" name="pesquisa"
+                placeholder="Procurar Estado...">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="pesquisar()">Pesquisar</button>
+                </div>
+            </form>
+            <div  class="alert alert-danger collapse" role="alert">
+                   <h5>Estado Inexistente</h5>
+                  </div>
+        </div>
+        <div class="invisible" name="resposta">
+            <img id="bandeira" class="img-fluid">
+            <table class="table table-striped table-bordered table-hover">
+                <tr>
+                    <th scope="col">
+                        Sigla
+                    </th>
+                    <td class="dados"></td>
+                </tr>
+                <tr>
+                    <th scope="col">
+                        Nome por extenso
+                    </th>
+                    <td class="dados"></td>
+                </tr>
+                <tr>
+                    <th scope="col">
+                        Capital
+                    </th>
+                    <td class="dados"></td>
+                </tr>
+                <tr>
+                    <th scope="col">
+                        Região
+                    </th>
+                    <td class="dados"></td>
+                </tr>
+            
+
+            </table>
+        </div>
+    </body>
+</html>
